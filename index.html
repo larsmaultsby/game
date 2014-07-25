@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title></title>
+        <style>
+        #gui{
+            display:none;
+        }
+        #gui td{
+            width:10px;
+            height:10px;
+            padding:0px;
+        }
+        table{
+            border-spacing:0px;
+            border-collapse:separate;
+        }
+            .grass{
+                background:#D5FFFA;
+            }
+            .water{
+                background:#83B2AD;
+            }
+            .building{
+                background:#B28571;
+            }
+            .entity{
+                background:#ccc;
+            }
+            .hero{
+                background:yellow;
+            }
+            .navigation{
+                display:block;
+            }
+        </style>
+        <script src="map.js"></script>
+        <script src="combat.js"></script>
+        <script src="player.js"></script>
+        <script src="time.js"></script>
+        <script src="commerce.js"></script>
+    </head>
+    <body>
+    <div id="gui">
+        
+    </div>
+    <div class="navigation">
+    <button onclick="stranger.move('n')">N</button>
+    <button onclick="stranger.move('s')">S</button>
+    <button onclick="stranger.move('e')">E</button>
+    <button onclick="stranger.move('w')">W</button>
+    </div>
+    <div class="actions">
+        
+    </div>
+    <script src="gui.js"></script>
+        <script>
+            var x = new map({size:30});
+            var theTime = new time();
+            var stranger = new player('stranger',theTime,x);
+            
+            //var jane = new player('jane',x);
+           
+        </script>
+        
+    </body>
+</html>
